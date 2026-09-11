@@ -1,0 +1,110 @@
+/* Visual layer only. Original page structure, copy and service icons are retained. */
+@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight: 600 900; font-style: normal; font-display: swap; }
+
+:root {
+  --ink: #071A3D;
+  --ink-soft: #374151;
+  --navy: #071A3D;
+  --petrol: #071A3D;
+  --petrol-deep: #071A3D;
+  --warm: #F5C62E;
+  --warm-light: #E9EFF7;
+  --paper: #F8FAFC;
+  --paper-deep: #E9EFF7;
+  --white: #F8FAFC;
+  --line: #D2DAE6;
+  --sky: #F5C62E;
+  --display: Montserrat, 'Segoe UI', Arial, sans-serif;
+  --sans: Montserrat, 'Segoe UI', Arial, sans-serif;
+  --serif: Montserrat, 'Segoe UI', Arial, sans-serif;
+}
+
+body { font-size: 16px; }
+::selection { background: var(--warm); color: var(--navy); }
+.site-header { background: var(--navy); border-bottom: 1px solid #F8FAFC26; }
+.brand { gap: 14px; }
+.brand-mark { width: 86px; height: 54px; }
+.brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+.brand-copy { padding-left: 16px; border-left: 1px solid #F8FAFC80; }
+.brand strong { font-size: 18px; letter-spacing: .22em; font-weight: 600; }
+.brand strong span { font-weight: inherit; }
+.brand small { color: var(--white); font-size: 12px; letter-spacing: 0; text-transform: none; font-weight: 400; line-height: 1.5; }
+.navigation { font-size: 14px; gap: clamp(14px, 1.4vw, 24px); }
+.hero { background: var(--navy); }
+.hero::before, .hero-visual::after, .orbit, .services-section::after { display: none; }
+.hero h1 { font-weight: 600; letter-spacing: -.035em; font-size: clamp(48px, 4.7vw, 76px); line-height: 1.08; }
+.hero h1 em { color: var(--warm); font-weight: 600; }
+.hero h1 em::after { height: 4px; width: 80px; margin-top: 24px; }
+.hero .eyebrow, .eyebrow.light { color: var(--warm); }
+.eyebrow { font-size: 14px; letter-spacing: .12em; }
+.hero-lead, .hero-location { color: var(--paper-deep); }
+.hero-location { font-size: 14px; }
+.hero .text-link { color: var(--white); font-size: 14px; }
+.hero-visual { min-height: 440px; }
+.signal-beam { inset: -6% -10% -8% 0; width: auto; height: auto; background: url('/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; box-shadow: none; z-index: 0; }
+.visual-core { width: 100%; height: auto; aspect-ratio: 680 / 420; padding: 0; background: var(--navy); border-radius: 0; box-shadow: none; }
+.visual-core img { display: block; }
+.hero-keyword { background: var(--navy); color: var(--white); border-left-color: var(--warm); font-size: 14px; font-weight: 500; letter-spacing: .08em; padding: 7px 12px; }
+.keyword-one { top: 10%; left: 0; }
+.keyword-two { top: 12%; right: 0; }
+.keyword-three { bottom: 12%; right: 0; }
+.visual-note { font-size: 13px; bottom: 0; right: auto; left: 0; background: var(--navy); padding: 6px 8px; }
+.button { border-radius: 3px; font-weight: 600; }
+.button:hover { box-shadow: none; }
+.trust-strip { background: var(--paper-deep); color: var(--navy); font-size: 13px; }
+.trust-strip span:not(:last-child)::after { color: var(--navy); }
+.section-heading h2, .trajectory-copy h2, .method-intro h2, .collaboration-section h2, .contact-intro h2 { font-weight: 600; letter-spacing: -.03em; line-height: 1.15; font-size: clamp(36px, 3.9vw, 60px); }
+.pillar-grid article, .package-card, .data-grid article, .trajectory-aside, .numbers-section > div, .case-list article, .technology-grid > div, .contact-form { border-radius: 3px; box-shadow: none; }
+.pillar-grid h3, .service-card h3, .package-card h3, .data-grid h3, .case-title h3 { font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
+.statement { border-left-width: 5px; border-radius: 0; box-shadow: none; font-weight: 500; }
+.services-section { background: var(--navy); }
+.service-card { background: #F8FAFC08; border-color: #F8FAFC38; border-radius: 3px; box-shadow: none; }
+.service-card:hover { background: #F8FAFC10; transform: none; }
+.service-card::after { width: 5px; height: 44px; right: 26px; transform: rotate(32deg); }
+.service-number, .result span { color: var(--warm); font-size: 13px; }
+.service-card > p, .service-card li, .services-section .section-heading > p, .method-intro > p, .collaboration-section > div > p { color: var(--paper-deep); }
+.service-card li { font-size: 14px; }
+.professional-note { border-radius: 0; }
+.methodology-section { background: var(--navy); }
+.methodology-section::after { left: auto; right: 0; top: auto; bottom: 0; width: 180px; height: 250px; background: url('/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; opacity: .22; }
+.method-list > li > span { border-color: var(--warm); color: var(--warm); }
+.method-list p, .method-intro > p, .collaboration-section > div > p { color: var(--paper-deep); }
+.numbers-section strong { color: var(--navy); font-weight: 600; }
+.collaboration-section li { background: #F8FAFC08; border-color: #F8FAFC38; }
+.collaboration-section details > p { background: var(--navy); color: var(--paper); border-color: var(--warm); }
+.contact-form label, .privacy-check, .booking-option > span { font-size: 14px; }
+.contact-form input, .contact-form select, .contact-form textarea { font-size: 16px; border-color: #7E8BA1; }
+.contact-prompt-list button span { color: var(--navy); }
+.site-footer { color: var(--paper-deep); background: var(--navy); }
+.footer-brand .brand-copy small { color: var(--paper-deep); }
+.footer-top > p { font-weight: 500; }
+
+@media (max-width: 1320px) {
+  .brand small { max-width: 240px; }
+  .brand strong { font-size: 16px; letter-spacing: .15em; }
+  .site-header { gap: 20px; padding-left: 24px; padding-right: 24px; }
+  .navigation { gap: 14px; font-size: 13px; }
+}
+@media (max-width: 1120px) {
+  .navigation { font-size: 16px; background: var(--navy); }
+  .hero-visual { width: min(560px, 92%); }
+}
+@media (max-width: 600px) {
+  .brand { min-width: 0; gap: 8px; }
+  .brand-mark { width: 64px; height: 44px; }
+  .brand-copy { padding-left: 10px; }
+  .brand strong { font-size: 14px; letter-spacing: .1em; }
+  .site-header { padding-left: 16px; padding-right: 16px; gap: 12px; }
+  .hero h1 { font-size: clamp(37px, 10.6vw, 60px); letter-spacing: -.04em; }
+  .hero-visual { width: 100%; min-height: 350px; transform: none; }
+  .visual-core { width: 100%; height: auto; padding: 0; }
+  .hero-keyword { font-size: 12px; }
+  .visual-note { display: block; font-size: 12px; }
+  .signal-beam { width: auto; }
+  .eyebrow { font-size: 12px; }
+  .section-heading h2, .trajectory-copy h2, .method-intro h2, .collaboration-section h2, .contact-intro h2 { font-size: clamp(30px, 8.5vw, 40px); }
+  .trust-strip { font-size: 12px; }
+  .statement { padding: 28px 24px; }
+}
