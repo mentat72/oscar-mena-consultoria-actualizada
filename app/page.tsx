@@ -215,6 +215,8 @@ const collaborationModes = [
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSddyfZ9ECIDI-7LPPlzkrOWdlkZyaWuE9UjvsgDeKS11kUSNA/formResponse";
 
+const CALENDAR_BOOKING_URL = "https://calendar.app.google/8vG2oif9GxqhPAyw6";
+
 const GOOGLE_FORM_FIELDS = {
   name: "entry.744806318",
   organization: "entry.1585734743",
@@ -230,6 +232,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [selectedNeed, setSelectedNeed] = useState("");
+  const [selectedMeetingMode, setSelectedMeetingMode] = useState("");
 
   function chooseContactNeed(need: string) {
     setSelectedNeed(need);
@@ -249,8 +252,12 @@ export default function Home() {
       setSubmitted(true);
       sourceForm.reset();
       setSelectedNeed("");
+      setSelectedMeetingMode("");
       return;
     }
+
+    const meetingMode = String(formData.get("meetingMode") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
 
     const googleForm = document.createElement("form");
     googleForm.action = GOOGLE_FORM_ACTION;
@@ -265,7 +272,9 @@ export default function Home() {
       phone: String(formData.get("phone") ?? ""),
       need: String(formData.get("need") ?? ""),
       deadline: String(formData.get("deadline") ?? ""),
-      message: String(formData.get("message") ?? ""),
+      message: meetingMode
+        ? `Modalidad preferida: ${meetingMode}${message ? `\n\n${message}` : ""}`
+        : message,
       consent: "Aceptado",
     };
 
@@ -282,6 +291,7 @@ export default function Home() {
     googleForm.remove();
     sourceForm.reset();
     setSelectedNeed("");
+    setSelectedMeetingMode("");
     setSubmitted(true);
   }
 
@@ -645,6 +655,13 @@ export default function Home() {
                 <input name="phone" type="tel" autoComplete="tel" />
               </label>
             </div>
+            <label>Modalidad de conversación
+              <select name="meetingMode" value={selectedMeetingMode} onChange={(event) => setSelectedMeetingMode(event.target.value)} required>
+                <option value="" disabled>Selecciona una opción</option>
+                <option value="Conversación telefónica">Conversación telefónica</option>
+                <option value="Videollamada">Videollamada</option>
+              </select>
+            </label>
             <label>Tipo de necesidad
               <select name="need" value={selectedNeed} onChange={(event) => setSelectedNeed(event.target.value)} required>
                 <option value="" disabled>Selecciona una opción</option>
@@ -675,11 +692,11 @@ export default function Home() {
               <span>O, si lo prefieres</span>
               <a
                 className="button booking-button"
-                href="https://calendar.app.google/8vG2oif9GxqhPAyw6"
+                href={CALENDAR_BOOKING_URL}
                 target="_blank"
                 rel="noreferrer"
               >
-                Agendar un primer contacto de 20 minutos <span aria-hidden="true">↗</span>
+                Elegir fecha para una conversación de 20 minutos <span aria-hidden="true">↗</span>
               </a>
             </div>
             {submitted && <p className="form-status" role="status">Solicitud registrada correctamente. Me pondré en contacto contigo lo antes posible.</p>}
