@@ -1,7 +1,7 @@
 /* Visual layer only. Original page structure, copy and service icons are retained. */
-@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: Montserrat; src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight: 600 900; font-style: normal; font-display: swap; }
+@font-face { font-family: Montserrat; src: url('../public/fonts/Montserrat-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Montserrat; src: url('../public/fonts/Montserrat-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: Montserrat; src: url('../public/fonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight: 600 900; font-style: normal; font-display: swap; }
 
 :root {
   --ink: #071A3D;
@@ -43,7 +43,7 @@ body { font-size: 16px; }
 .hero-location { font-size: 14px; }
 .hero .text-link { color: var(--white); font-size: 14px; }
 .hero-visual { min-height: 440px; }
-.signal-beam { inset: -6% -10% -8% 0; width: auto; height: auto; background: url('/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; box-shadow: none; z-index: 0; }
+.signal-beam { inset: -6% -10% -8% 0; width: auto; height: auto; background: url('../public/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; box-shadow: none; z-index: 0; }
 .visual-core { width: 100%; height: auto; aspect-ratio: 680 / 420; padding: 0; background: var(--navy); border-radius: 0; box-shadow: none; }
 .visual-core img { display: block; }
 .hero-keyword { background: var(--navy); color: var(--white); border-left-color: var(--warm); font-size: 14px; font-weight: 500; letter-spacing: .08em; padding: 7px 12px; }
@@ -68,7 +68,7 @@ body { font-size: 16px; }
 .service-card li { font-size: 14px; }
 .professional-note { border-radius: 0; }
 .methodology-section { background: var(--navy); }
-.methodology-section::after { left: auto; right: 0; top: auto; bottom: 0; width: 180px; height: 250px; background: url('/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; opacity: .22; }
+.methodology-section::after { left: auto; right: 0; top: auto; bottom: 0; width: 180px; height: 250px; background: url('../public/brand/marca-personal/OM_diagonal_color.svg') center / contain no-repeat; transform: none; opacity: .22; }
 .method-list > li > span { border-color: var(--warm); color: var(--warm); }
 .method-list p, .method-intro > p, .collaboration-section > div > p { color: var(--paper-deep); }
 .numbers-section strong { color: var(--navy); font-weight: 600; }

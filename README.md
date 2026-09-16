@@ -1,8 +1,12 @@
-# vinext-starter
+# Oscar Mena | Consultoría socioeducativa
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Sitio profesional de Oscar Mena para proyectos técnicos, licitaciones, evaluación, indicadores, datos y automatización.
+
+## GitHub Pages
+
+Este repositorio es independiente de `oscar-mena-consultoria`. El flujo [Deploy GitHub Pages](.github/workflows/deploy-pages.yml) publica desde `main` una versión estática del sitio.
+
+La compilación calcula automáticamente la ruta pública a partir del repositorio, por lo que imágenes, tipografías y el perfil descargable funcionan bajo GitHub Pages.
 
 ## Prerequisites
 
@@ -89,6 +93,7 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run build:pages`: generate the static GitHub Pages output
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 

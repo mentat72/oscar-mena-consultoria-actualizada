@@ -2,10 +2,12 @@
 
 import { FormEvent, useState } from "react";
 
+const siteAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const services = [
   {
     number: "01",
-    icon: "/brand/diagnostico.png",
+    icon: siteAsset("/brand/diagnostico.png"),
     title: "Análisis de pliegos y oportunidades",
     intro: "Una lectura ordenada antes de comprometer tiempo y recursos.",
     items: [
@@ -18,7 +20,7 @@ const services = [
   },
   {
     number: "02",
-    icon: "/brand/hoja-ruta.png",
+    icon: siteAsset("/brand/hoja-ruta.png"),
     title: "Redacción de proyectos técnicos",
     intro: "Del pliego a una propuesta coherente, concreta y evaluable.",
     items: [
@@ -31,7 +33,7 @@ const services = [
   },
   {
     number: "03",
-    icon: "/brand/resultados.png",
+    icon: siteAsset("/brand/resultados.png"),
     title: "Revisión y mejora de memorias",
     intro: "Una revisión criterio por criterio antes de presentar.",
     items: [
@@ -44,7 +46,7 @@ const services = [
   },
   {
     number: "04",
-    icon: "/brand/datos-decision.png",
+    icon: siteAsset("/brand/datos-decision.png"),
     title: "Evaluación e indicadores",
     intro: "Sistemas que explican qué se hace, cómo evoluciona y qué consigue.",
     items: [
@@ -57,7 +59,7 @@ const services = [
   },
   {
     number: "05",
-    icon: "/brand/automatizacion.png",
+    icon: siteAsset("/brand/automatizacion.png"),
     title: "Datos y automatización",
     intro: "Menos tareas repetitivas y una información operativa más fiable.",
     items: [
@@ -70,7 +72,7 @@ const services = [
   },
   {
     number: "06",
-    icon: "/brand/adopcion.png",
+    icon: siteAsset("/brand/adopcion.png"),
     title: "Conocimiento e IA aplicada",
     intro: "La experiencia de la organización, accesible y reutilizable.",
     items: [
@@ -302,7 +304,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Oscar Mena, inicio">
           <span className="brand-mark" aria-hidden="true">
-            <img src="/brand/marca-personal/OM_isotipo_negativo.svg" alt="" />
+            <img src={siteAsset("/brand/marca-personal/OM_isotipo_negativo.svg")} alt="" />
           </span>
           <span className="brand-copy">
             <strong><span>Oscar</span> Mena</strong>
@@ -354,7 +356,7 @@ export default function Home() {
             <div className="hero-actions">
               <a className="button primary" href="#contacto">Concertar una conversación <span aria-hidden="true">→</span></a>
               <a className="button secondary" href="#ayuda">Explorar servicios</a>
-              <a className="text-link" href="/perfil-oscar-mena.pdf" download>
+              <a className="text-link" href={siteAsset("/perfil-oscar-mena.pdf")} download>
                 Descargar perfil <span aria-hidden="true">↓</span>
               </a>
             </div>
@@ -366,7 +368,7 @@ export default function Home() {
             <div className="orbit orbit-one" />
             <div className="orbit orbit-two" />
             <div className="visual-core">
-              <img src="/brand/marca-personal/OM_isotipo_negativo.svg" alt="" />
+              <img src={siteAsset("/brand/marca-personal/OM_isotipo_negativo.svg")} alt="" />
             </div>
             <div className="hero-keyword keyword-one">proyectos</div>
             <div className="hero-keyword keyword-two">personas</div>
@@ -709,7 +711,7 @@ export default function Home() {
         <div className="footer-top">
           <a className="brand footer-brand" href="#inicio">
             <span className="brand-mark" aria-hidden="true">
-              <img src="/brand/marca-personal/OM_isotipo_negativo.svg" alt="" />
+                <img src={siteAsset("/brand/marca-personal/OM_isotipo_negativo.svg")} alt="" />
             </span>
             <span className="brand-copy"><strong><span>Oscar</span> Mena</strong><small>Consultoría de proyectos y transformación</small></span>
           </a>
