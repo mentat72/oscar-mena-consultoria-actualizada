@@ -390,6 +390,61 @@ export default function Home() {
             <p className="eyebrow">Una combinación poco habitual</p>
             <h2>Experiencia sectorial y capacidad analítica, en la misma mesa de trabajo.</h2>
           </div>
+          <div className="service-dossiers" id="servicios-descargables" aria-labelledby="dossiers-title">
+            <div className="dossiers-heading">
+              <div>
+                <p className="eyebrow">Servicios en detalle</p>
+                <h3 id="dossiers-title">Conoce el alcance de cada servicio.</h3>
+              </div>
+              <p>Dos documentos para consultar qué incluye el trabajo, cómo se desarrolla y qué puedes esperar de la colaboración.</p>
+            </div>
+            <div className="dossier-grid">
+              <article className="dossier-card" aria-labelledby="dossier-proyectos-title">
+                <div className="dossier-top">
+                  <img className="dossier-cover" src={siteAsset("/servicios/portada-proyectos.png")} alt="Portada del documento Diseño técnico de proyectos y licitaciones" width="637" height="900" />
+                  <div>
+                    <p className="dossier-label">Proyectos y licitaciones</p>
+                    <h4 id="dossier-proyectos-title">Diseño técnico de proyectos y licitaciones</h4>
+                    <p>Convierte una oportunidad en una propuesta técnica estructurada, viable y preparada para su ejecución.</p>
+                  </div>
+                </div>
+                <ul className="dossier-scope">
+                  <li>Análisis de requisitos y diseño del proyecto.</li>
+                  <li>Metodología, recursos, cronograma e indicadores.</li>
+                  <li>Redacción completa, apoyo parcial o revisión técnica.</li>
+                </ul>
+                <div className="dossier-footer">
+                  <p className="dossier-meta">PDF · 5 páginas · 230 KB</p>
+                  <div className="dossier-actions">
+                    <a className="dossier-download" href={siteAsset("/servicios/diseno-tecnico-proyectos-licitaciones.pdf")} download="Oscar-Mena-Diseno-tecnico-proyectos-licitaciones.pdf" aria-label="Descargar PDF de Diseño técnico de proyectos y licitaciones">Descargar PDF <span aria-hidden="true">↓</span></a>
+                    <a className="dossier-view" href={siteAsset("/servicios/diseno-tecnico-proyectos-licitaciones.pdf")} target="_blank" rel="noopener noreferrer" aria-label="Ver PDF de Diseño técnico de proyectos y licitaciones, se abre en otra pestaña">Ver documento <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+              <article className="dossier-card" aria-labelledby="dossier-evaluacion-title">
+                <div className="dossier-top">
+                  <img className="dossier-cover" src={siteAsset("/servicios/portada-evaluacion.png")} alt="Portada del documento Evaluación, indicadores y mejora de programas" width="637" height="900" />
+                  <div>
+                    <p className="dossier-label">Evaluación y mejora</p>
+                    <h4 id="dossier-evaluacion-title">Evaluación, indicadores y mejora de programas</h4>
+                    <p>Convierte la actividad del programa en información útil para decidir, rendir cuentas y orientar mejoras.</p>
+                  </div>
+                </div>
+                <ul className="dossier-scope">
+                  <li>Marco de evaluación y sistema de indicadores.</li>
+                  <li>Recogida de datos, análisis y cuadros de seguimiento.</li>
+                  <li>Informes y recomendaciones priorizadas de mejora.</li>
+                </ul>
+                <div className="dossier-footer">
+                  <p className="dossier-meta">PDF · 5 páginas · 246 KB</p>
+                  <div className="dossier-actions">
+                    <a className="dossier-download" href={siteAsset("/servicios/evaluacion-indicadores-mejora-programas.pdf")} download="Oscar-Mena-Evaluacion-indicadores-mejora-programas.pdf" aria-label="Descargar PDF de Evaluación, indicadores y mejora de programas">Descargar PDF <span aria-hidden="true">↓</span></a>
+                    <a className="dossier-view" href={siteAsset("/servicios/evaluacion-indicadores-mejora-programas.pdf")} target="_blank" rel="noopener noreferrer" aria-label="Ver PDF de Evaluación, indicadores y mejora de programas, se abre en otra pestaña">Ver documento <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
           <div className="pillar-grid">
             <article>
               <span className="line-icon" aria-hidden="true">I</span>
